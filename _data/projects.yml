@@ -1,0 +1,24 @@
+# ── Selected projects (shown in this order) ──
+# summary: one sentence on what it does and why it matters.
+# result: optional — a number or outcome ("Cuts planning time from 2 hours to 5 minutes").
+# Leave a link empty "" to hide its button.
+
+- title: "Travel Experience Agent"
+  kind: "Major"
+  year: 2026
+  summary: "An AI agent that plans a full trip from one sentence: it researches places, builds a day-by-day itinerary and adjusts it as plans change."
+  result: ""
+  tools: [Python, LLMs, Agents, APIs]
+  live: "https://projects.isidd.dev/travel-experience-agent/"
+  build: "https://architecture.isidd.dev/travel-experience-agent/"
+  code: "https://github.com/isthiscoder/Projects"
+
+- title: "Intelligence Image"
+  kind: "Minor"
+  year: 2026
+  summary: "A computer-vision app that looks at an image and explains what is in it, in plain language."
+  result: ""
+  tools: [Python, Computer Vision, Deep Learning]
+  live: "https://projects.isidd.dev/intelligence-image/"
+  build: "https://architecture.isidd.dev/"
+  code: "https://github.com/isthiscoder/Projects"

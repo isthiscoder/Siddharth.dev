@@ -1,0 +1,16 @@
+# ── Project Architecture highlights (how you built things) ──
+# Show your 3 best. Replace the last two with real posts as you publish them.
+- title: "Travel Experience Agent: how I built it"
+  note: "The agent loop, the tools it calls, and how it turns one sentence into a full itinerary."
+  read: 1
+  url: "https://architecture.isidd.dev/travel-experience-agent/"
+
+- title: "Intelligence Image: the vision pipeline"
+  note: "From an uploaded photo to a plain-language explanation, step by step."
+  read: 5
+  url: "https://architecture.isidd.dev/"
+
+- title: "Document Q&A Bot: designing the system"
+  note: "Chunking, embeddings and retrieval: the plan before the code."
+  read: 5
+  url: "https://architecture.isidd.dev/"

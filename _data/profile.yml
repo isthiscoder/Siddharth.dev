@@ -1,0 +1,16 @@
+# ── Who you are ──
+name: "Siddharth Singh"
+headline: "I build AI systems end to end, and document how they work."
+location: "India"
+
+# Short About section. Each line is a paragraph.
+about:
+  - "I'm a self-taught engineer working across AI, science and technology. I don't have a degree, so I show my work instead: every project here is live, documented and explained from first principles."
+  - "I build in public. Projects is what I made, Architecture is how I made it, and the Engineering Playbook explains the technology underneath. Bitslyf is where I research industries, and my blog is where I write."
+
+# Contact & links (leave a value empty "" to hide it)
+email: "your@email.com"   # ← put your real email here (shows the email icon)
+github: "https://github.com/isthiscoder"
+linkedin: "https://linkedin.com/in/siiddharrt"
+twitter: "https://x.com/siiddharrt"
+resume: ""          # e.g. /assets/resume.pdf once you upload one

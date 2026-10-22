@@ -1,0 +1,26 @@
+# ── Latest from Bitslyf (bitslyf.com) ──
+# Newest first; the home page shows the top 3.
+# category: Analysis | Research | Prediction | Thesis
+- title: "Packaging Constraint"
+  category: Prediction
+  note: "The capacity gating shipments stays booked out through 2027."
+  date: 2026-10-12
+  url: "https://bitslyf.com/predictions/2026-10-12-packaging-constraint/"
+
+- title: "Advanced packaging is the bottleneck, not the node"
+  category: Research
+  note: "Packaging capacity, not node size, limits chip shipments, and it is booked years ahead."
+  date: 2026-10-12
+  url: "https://bitslyf.com/essays/2026-10-12-advanced-packaging/"
+
+- title: "Why a datacentre waits three years for power it already paid for"
+  category: Analysis
+  note: "The grid interconnection queue as a workflow: who approves what, and where delays build up."
+  date: 2026-10-05
+  url: "https://bitslyf.com/essays/2026-10-05-interconnection-queue/"
+
+- title: "The Big 5"
+  category: Thesis
+  note: "Semiconductors, energy, AI, space and defence as one story about physical constraints."
+  date: 2026-08-20
+  url: "https://bitslyf.com/essays/2026-08-20-big-5/"

@@ -1,0 +1,12 @@
+<li class="upd" data-area="{{ include.u.area | downcase }}">
+  <time datetime="{{ include.u.date | date: '%Y-%m-%d' }}">{{ include.u.date | date: "%b %-d, %Y" }}</time>
+  <span class="u-body">
+    <span class="area">{{ include.u.area }}</span>
+    {%- if include.u.url %}
+    <a class="u-head" href="{{ include.u.url }}">{{ include.u.title }}</a>
+    {%- else %}
+    <span class="u-head">{{ include.u.title }}</span>
+    {%- endif %}
+    <span class="u-note">{{ include.u.note }}</span>
+  </span>
+</li>

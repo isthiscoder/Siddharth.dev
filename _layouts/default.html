@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · Engineer{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | default: '/' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-portfolio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og-portfolio.png">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="{{ '/assets/fonts/EBGaramond.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <div class="page{% if page.single %} page-single{% endif %}">
+    {{ content }}
+  </div>
+  <script>
+    // Highlight the section you're reading in the left-hand list.
+    (function () {
+      var links = document.querySelectorAll('.toc a');
+      if (!('IntersectionObserver' in window) || !links.length) return;
+      var map = {};
+      links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            links.forEach(function (a) { a.classList.remove('is-active'); });
+            if (map[e.target.id]) map[e.target.id].classList.add('is-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+<aside class="intro">
+  <div class="intro-top">
+    <h1 class="name"><a href="#top">{{ p.name }}</a></h1>
+    <p class="headline">{{ p.headline }}</p>
+    <nav class="toc" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#playbook">Playbook</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#bitslyf">Bitslyf</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#updates">Updates</a>
+    </nav>
+  </div>
+  <nav class="social" aria-label="Elsewhere">
+    {%- if p.github != "" -%}<a href="{{ p.github }}" aria-label="GitHub" rel="me noopener">{% include icons/github.svg %}</a>{%- endif -%}
+    {%- if p.linkedin != "" -%}<a href="{{ p.linkedin }}" aria-label="LinkedIn" rel="me noopener">{% include icons/linkedin.svg %}</a>{%- endif -%}
+    {%- if p.twitter != "" -%}<a href="{{ p.twitter }}" aria-label="X (Twitter)" rel="me noopener">{% include icons/twitter.svg %}</a>{%- endif -%}
+    {%- if p.email != "" -%}<a href="mailto:{{ p.email }}" aria-label="Email">{% include icons/email.svg %}</a>{%- endif -%}
+  </nav>
+</aside>
+
+<main class="work" id="top">
+
+  <section id="about" class="block" aria-labelledby="h-about">
+    <h2 class="label" id="h-about">About</h2>
+    {%- for para in p.about %}
+    <p class="lede">{{ para }}</p>
+    {%- endfor %}
+  </section>
+
+  <section id="projects" class="block" aria-labelledby="h-projects">
+    <h2 class="label" id="h-projects">Projects</h2>
+    <ol class="projects">
+      {%- for pr in site.data.projects %}
+      <li class="project">
+        <p class="p-meta"><span class="kind">{{ pr.kind }}</span><span>{{ pr.year }}</span></p>
+        <h3 class="p-title">{% if pr.live != "" %}<a href="{{ pr.live }}">{{ pr.title }}</a>{% else %}{{ pr.title }}{% endif %}</h3>
+        <p class="p-summary">{{ pr.summary }}</p>
+        {%- if pr.result and pr.result != "" %}<p class="p-result">{{ pr.result }}</p>{% endif %}
+        <ul class="tools">{% for t in pr.tools %}<li>{{ t }}</li>{% endfor %}</ul>
+        <p class="p-links">
+          {%- if pr.live != "" -%}<a href="{{ pr.live }}">Live demo</a>{%- endif -%}
+          {%- if pr.build != "" -%}<a href="{{ pr.build }}">How I built it</a>{%- endif -%}
+          {%- if pr.code != "" -%}<a href="{{ pr.code }}">Code</a>{%- endif -%}
+        </p>
+      </li>
+      {%- endfor %}
+    </ol>
+    <a class="more" href="https://projects.isidd.dev/">All projects</a>
+  </section>
+
+  <section id="playbook" class="block" aria-labelledby="h-playbook">
+    <h2 class="label" id="h-playbook">Engineering Playbook</h2>
+    <p class="section-note">How the technology actually works, explained from first principles.</p>
+    <ul class="writing">
+      {%- for w in site.data.playbook limit: 3 %}
+      <li>
+        <a href="{{ w.url }}">
+          <span class="w-title">{{ w.title }}</span>
+          <span class="w-note">{{ w.note }}</span>
+          <span class="w-read">{{ w.read }} min read</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="https://playbook.isidd.dev/">Full Playbook</a>
+  </section>
+
+  <section id="architecture" class="block" aria-labelledby="h-architecture">
+    <h2 class="label" id="h-architecture">Project Architecture</h2>
+    <p class="section-note">How I design and build my projects, end to end.</p>
+    <ul class="writing">
+      {%- for w in site.data.architecture limit: 3 %}
+      <li>
+        <a href="{{ w.url }}">
+          <span class="w-title">{{ w.title }}</span>
+          <span class="w-note">{{ w.note }}</span>
+          <span class="w-read">{{ w.read }} min read</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="https://architecture.isidd.dev/">Full Architecture</a>
+  </section>
+
+  <section id="bitslyf" class="block" aria-labelledby="h-bitslyf">
+    <h2 class="label" id="h-bitslyf">Bitslyf</h2>
+    <p class="section-note">My research lab: analysis, research, predictions and thesis on industries and workflows.</p>
+    <ul class="writing tagged">
+      {%- for w in site.data.bitslyf limit: 3 %}
+      <li>
+        <a href="{{ w.url }}">
+          <span class="area w-area">{{ w.category }}</span>
+          <span class="w-title">{{ w.title }}</span>
+          <span class="w-note">{{ w.note }}</span>
+          <span class="w-read">{{ w.date | date: "%b %-d, %Y" }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="https://bitslyf.com/">Open Bitslyf</a>
+  </section>
+
+  <section id="blogs" class="block" aria-labelledby="h-blogs">
+    <h2 class="label" id="h-blogs">Blogs</h2>
+    <p class="section-note">Essays, photographs and films on isidd.com.</p>
+    <ul class="writing">
+      {%- for w in site.data.blogs limit: 3 %}
+      <li>
+        <a href="{{ w.url }}">
+          <span class="w-title">{{ w.title }}</span>
+          <span class="w-note">{{ w.note }}</span>
+          <span class="w-read">{{ w.read }} min read</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <a class="more" href="https://isidd.com/writings/">All blogs</a>
+  </section>
+
+  <section id="updates" class="block" aria-labelledby="h-updates">
+    <h2 class="label" id="h-updates">Updates</h2>
+    <p class="section-note">What I'm working on across projects, write-ups, research and writing.</p>
+    <ol class="updates">
+      {%- for u in site.data.updates limit: 3 %}
+      {%- include update-row.html u=u %}
+      {%- endfor %}
+    </ol>
+    <a class="more" href="{{ '/updates/' | relative_url }}">All updates</a>
+  </section>
+
+  <footer class="foot">
+    <p class="copyline">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+  </footer>
+</main>

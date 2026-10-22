@@ -1,0 +1,61 @@
+---
+layout: default
+title: Updates
+permalink: /updates/
+single: true
+---
+{%- comment -%} The full archive of everything you're working on. Edit _data/updates.yml. {%- endcomment -%}
+{%- assign all = site.data.updates -%}
+{%- assign areas = "Projects,Playbook,Architecture,Bitslyf,Blogs" | split: "," -%}
+<main class="archive">
+  <p class="back"><a href="{{ '/' | relative_url }}">Siddharth Singh</a></p>
+  <h1 class="a-title">Updates</h1>
+  <p class="a-lede">Everything I'm working on: projects, write-ups, research at Bitslyf, and writing.</p>
+  <p class="a-count">{{ all.size }} updates{% if all.size > 0 %} · last updated {{ all.first.date | date: "%B %-d, %Y" }}{% endif %}</p>
+
+  <div class="filters" role="group" aria-label="Filter by area">
+    <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span>{{ all.size }}</span></button>
+    {%- for a in areas %}
+    {%- assign n = all | where: "area", a %}
+    {%- if n.size > 0 %}
+    <button type="button" class="chip" data-filter="{{ a | downcase }}" aria-pressed="false">{{ a }} <span>{{ n.size }}</span></button>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+
+  {%- assign prev = "" %}
+  {%- for u in all %}
+    {%- assign m = u.date | date: "%B %Y" %}
+    {%- if m != prev %}
+      {%- unless forloop.first %}</ol></section>{% endunless %}
+  <section class="month-block">
+    <h2 class="a-month">{{ m }}</h2>
+    <ol class="updates">
+      {%- assign prev = m %}
+    {%- endif %}
+      {%- include update-row.html u=u %}
+    {%- if forloop.last %}</ol></section>{% endif %}
+  {%- endfor %}
+  <p class="none" id="none" hidden>Nothing here yet.</p>
+
+  <footer class="foot">
+    <p class="copyline">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+  </footer>
+</main>
+<script>
+  // Filter the archive by area.
+  (function () {
+    var chips = document.querySelectorAll('.chip');
+    var rows = document.querySelectorAll('.upd');
+    var months = document.querySelectorAll('.month-block');
+    var none = document.getElementById('none');
+    function apply(f) {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.filter === f ? 'true' : 'false'); });
+      rows.forEach(function (r) { r.hidden = !(f === 'all' || r.dataset.area === f); });
+      var shown = 0;
+      months.forEach(function (m) { var v = m.querySelectorAll('.upd:not([hidden])').length; m.hidden = v === 0; shown += v; });
+      none.hidden = shown > 0;
+    }
+    chips.forEach(function (c) { c.addEventListener('click', function () { apply(c.dataset.filter); }); });
+  })();
+</script>

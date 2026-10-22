@@ -1,0 +1,15 @@
+# ── Engineering Playbook highlights (your best explainers) ──
+- title: "Building a tiny GPT from scratch"
+  note: "Writing a small GPT-style model line by line, and what broke along the way."
+  read: 12
+  url: "https://playbook.isidd.dev/building-a-tiny-gpt-from-scratch/"
+
+- title: "RAG: what actually matters"
+  note: "How to make a model answer questions about your own documents."
+  read: 6
+  url: "https://playbook.isidd.dev/rag-what-actually-matters/"
+
+- title: "How neural networks work"
+  note: "From a single neuron to backpropagation, explained from first principles."
+  read: 8
+  url: "https://playbook.isidd.dev/how-neural-networks-work/"

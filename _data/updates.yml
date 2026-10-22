@@ -1,0 +1,57 @@
+# ── Updates: everything you're working on ──
+# Newest first. The home page shows the latest 3; isidd.dev/updates/ shows them all.
+#
+#   date:  YYYY-MM-DD
+#   area:  Projects | Playbook | Architecture | Bitslyf | Blogs
+#   title: the headline (what you did)
+#   note:  one short line under it
+#   url:   optional — where the headline links (leave out for no link)
+#
+# These are starter entries. Replace them with your own.
+
+- date: 2026-10-21
+  area: Projects
+  title: "Projects site gets an Updates page"
+  note: "Building now, live demos and a changelog in one place."
+  url: "https://projects.isidd.dev/updates/"
+
+- date: 2026-10-20
+  area: Architecture
+  title: "Travel Experience Agent: how I built it"
+  note: "The full architecture write-up for my first major project."
+  url: "https://architecture.isidd.dev/travel-experience-agent/"
+
+- date: 2026-10-18
+  area: Bitslyf
+  title: "Researching the energy industry"
+  note: "Mapping where AI meets power and grids, for The BIG 5 thesis."
+
+- date: 2026-10-16
+  area: Blogs
+  title: "How to read tech news"
+  note: "Separate the signal from the press release."
+  url: "https://isidd.com/writings/how-to-read-tech-news/"
+
+- date: 2026-10-12
+  area: Projects
+  title: "Travel Experience Agent v0.3"
+  note: "Cut response time by 40%."
+  url: "https://projects.isidd.dev/travel-experience-agent/"
+
+- date: 2026-10-05
+  area: Projects
+  title: "Intelligence Image: batch upload"
+  note: "Explain many images in one go."
+  url: "https://projects.isidd.dev/intelligence-image/"
+
+- date: 2026-10-02
+  area: Playbook
+  title: "How neural networks work"
+  note: "From a single neuron to backpropagation, from first principles."
+  url: "https://playbook.isidd.dev/how-neural-networks-work/"
+
+- date: 2026-09-28
+  area: Projects
+  title: "Launched projects.isidd.dev"
+  note: "One home for everything I build, major and minor."
+  url: "https://projects.isidd.dev/"
