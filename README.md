@@ -1,2 +1,4 @@
 # Siddharth.dev
-Here i show what work i do.
+Hey there , I'm Siddharth singh a Self Taught Engineer Learning , Deploying & Documenting end to end Projects. I'm very Curious about 'How Technology actually works' keeping that Curiosity I'm working in the field of Technology. I love to Build. Projects are What i Build , Architecture is How i Build & Playbook is How Technology actually works. [Bitslyf](https://bitslyf.com) is where I Research Industries. Currently I'm diving deep in Artificial Intelligence & Data Science. It's the place where i do spent most of my time building Cool intelligence & i guess it's Cool. Go ahead & deep dive on my [Lab](https://isidd.dev) get hands on learning.
+
+- Do share your Projects & Ideas on my [email](mailto:isidd.dev@gmail.com) Let's build together.
